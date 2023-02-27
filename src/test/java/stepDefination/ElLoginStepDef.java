@@ -42,7 +42,7 @@ public class ElLoginStepDef {
 	
 	@Then("It should display the dashboard")
 	public void it_should_display_the_dashboard() throws Exception {
-	  Thread.sleep(2000);
+	  Thread.sleep(4000);
 		obj.test3();
 		
 	}
