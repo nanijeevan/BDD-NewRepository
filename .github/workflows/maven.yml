@@ -8,11 +8,12 @@
 
 name: Java CI with Maven
 
-on:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+
+on:  [workflow_dispatch]
+ # push:
+  #  branches: [ "master" ]
+ # pull_request:
+  #  branches: [ "master" ]
 
 jobs:
   build:
@@ -21,11 +22,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Set up JDK 17.05
+    - name: Set up JDK 17.0.5
       uses: actions/setup-java@v3
       with:
-        java-version: '17.05'
-       distribution: 'adopt'
+        java-version: '17.0.5'
+        distribution: 'adopt'
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file Gittesting/pom.xml
